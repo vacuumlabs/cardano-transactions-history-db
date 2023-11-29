@@ -1,2 +1,5 @@
 # IDE
 .history
+
+# Node.js
+node_modules/
