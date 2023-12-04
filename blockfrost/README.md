@@ -21,5 +21,5 @@ As this method depends heavily on the Blockfrost services, we need to do these s
     - No need to manage a local cardano node
     - Blockfrost's web UI gives you a lot of control and debug opportunities (e.g. list of successful/failed requests, email on failed request...) over the webhook
 - **Drawbacks**:
-    - you heavily depends on a third party service (Blockfrost)
-    - trigger conditions are limited to the ones provided by Blockfrost (however it seems to be enough for most use cases)
+    - You heavily depends on a third party service (Blockfrost)
+    - Trigger conditions are limited to the ones provided by Blockfrost (however it seems to be enough for most use cases)

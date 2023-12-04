@@ -1,12 +1,12 @@
 import express, { Request, Response } from "express";
-import util from "util";
+import { onTransaction } from "./on-transaction";
 
 const app = express();
 app.use(express.json());
 const port = 3001;
 
 app.post("/action-on-smart-contract", (req: Request, res: Response) => {
-  console.log(util.inspect(req.body, false, null));
+  onTransaction(req);
 
   res.sendStatus(200);
 });
