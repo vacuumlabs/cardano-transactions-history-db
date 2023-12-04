@@ -1,0 +1,15 @@
+name: ogmios
+services:
+  cardano-node-ogmios:
+    stdin_open: true
+    tty: true
+    container_name: cardano-node-ogmios
+    ports:
+      - ${PORT:-1337}:1337
+    volumes:
+      - cardano-node-ogmios-db:/db
+    platform: linux/amd64
+    image: cardanosolutions/cardano-node-ogmios:v5.6.0_1.35.5-${NETWORK:-preview}
+volumes:
+  cardano-node-ogmios-db:
+    name: cardano-node-ogmios-${NETWORK:-preview}-db
