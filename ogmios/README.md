@@ -7,7 +7,7 @@ We will use the **[Chain synchronization](https://ogmios.dev/mini-protocols/loca
 To start a local cardano-node with a tied ogmios server:
 1. Run the docker images: `docker-compose up`. Defaultly the cardano-node will join the `preview` network (can be changed via setting the `NETWORK` env variable before running thecommand)
 2. The ogmios server will be reachable defaulty on port **1337** (can be changed via setting the `PORT` env variable before running the docker-compose command)
-3. Run the node script which will connect to the ogmios server and listen to the chain-sync events: `npm run start`
+3. Run the node script which will connect to the ogmios server and listen to the chain-sync events: `npm run start`  (hot reloading is enabled)
 
 ### Conclusions
 - **Benefits**:

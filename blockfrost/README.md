@@ -6,7 +6,7 @@ We will use the **[Webhooks](https://blockfrost.dev/start-building/webhooks/)** 
 ### Setup
 To start the webhook endpoint from your local machine:
 1. Install dependencies: `npm install`
-2. Start the web server: `npm start` (live reloading is enabled)
+2. Start the web server: `npm start` (hot reloading is enabled)
 3. Expose the endpoint to the internet (I suggest [VSCode's Loocal Port Forwarding](https://code.visualstudio.com/docs/editor/port-forwarding), or you can use [ngrok](https://ngrok.com/) or any other tool)
 
 As this method depends heavily on the Blockfrost services, we need to do these steps on the *[Blockfrost's Web UI](https://blockfrost.dev/)*:
