@@ -1,6 +1,13 @@
-import util from "util";
 import { Request } from "express";
+import { writeTransactionDataToFile } from "./write-transaction-data-to-file";
 
 export const onTransaction = async (req: Request) => {
-  console.log(util.inspect(req.body, false, null));
+  const timestamp = new Date().getTime();
+  const transaction: { payload: [{ tx: { hash: string } }] } = req.body;
+  writeTransactionDataToFile(
+    transaction.payload[0].tx.hash,
+    "blockfrost",
+    timestamp,
+    req.body
+  );
 };

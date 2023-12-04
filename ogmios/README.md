@@ -13,6 +13,8 @@ To start a local cardano-node with a tied ogmios server:
 - **Benefits**:
     - Full control over the cardano-node
     - Full control over the trigger conditions
+    - Quick response time
 - **Drawbacks**:
     - Harder to setup the full environment
     - You need to maintain and ensure the availibility of the cardano-node and the ogmios server yourself
+    - Transaction data is in raw format (e.g. no input addresses)
