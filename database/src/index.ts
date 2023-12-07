@@ -23,3 +23,4 @@ export {
   TransactionOutput,
   TransactionType,
 } from "./entity/Transaction";
+export { writeTransactionDataToFile } from "./write-transaction-data-to-file";

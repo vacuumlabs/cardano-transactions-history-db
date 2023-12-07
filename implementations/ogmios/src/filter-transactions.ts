@@ -1,10 +1,10 @@
 import { ChainSyncMessageHandlers } from "@cardano-ogmios/client/dist/ChainSync";
 import { Address } from "@cardano-ogmios/schema";
-import { writeTransactionDataToFile } from "./write-transaction-data-to-file";
 import {
   Transaction,
   TransactionOutput,
   TransactionType,
+  writeTransactionDataToFile,
 } from "../../../database/dist";
 
 type ChainSyncResponse = Parameters<ChainSyncMessageHandlers["rollForward"]>[0];

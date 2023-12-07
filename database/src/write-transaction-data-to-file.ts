@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "fs";
+import * as path from "path";
 
 export const writeTransactionDataToFile = (
   hash: string,
@@ -7,7 +8,7 @@ export const writeTransactionDataToFile = (
   data: any
 ) => {
   // open file (if exists)
-  const filePath = `../../_transactions/${hash}.json`;
+  const filePath = path.join(__dirname, "../../_transactions", `${hash}.json`);
   let existingFileContent: {
     timestamps: Record<string, number>;
     data: Record<string, any>;

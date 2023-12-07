@@ -1,9 +1,9 @@
 import { Request } from "express";
-import { writeTransactionDataToFile } from "./write-transaction-data-to-file";
 import {
   Transaction,
   TransactionOutput,
   TransactionType,
+  writeTransactionDataToFile,
 } from "../../../database/dist";
 
 export const onTransaction = async (req: Request) => {
