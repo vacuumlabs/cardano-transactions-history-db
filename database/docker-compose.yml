@@ -1,0 +1,16 @@
+version: "3.1"
+name: "cardano-transactions-history-db"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: development
+      POSTGRES_PASSWORD: oguuD3*W3S72
+      POSTGRES_DB: transactions
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - ${ADMINER_PORT:-8080}:8080
