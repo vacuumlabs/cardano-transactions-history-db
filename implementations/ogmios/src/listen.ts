@@ -7,8 +7,10 @@ import {
 import { filterTransactions } from "./filter-transactions";
 import { initializeTransactionDB } from "../../../database/dist";
 
-const connection = createConnectionObject({ host: "localhost", port: 1337 });
-const socket = new WebSocket("ws://localhost:1337");
+const port = Number(process.env.PORT) || 1337;
+
+const connection = createConnectionObject({ host: "localhost", port });
+const socket = new WebSocket(`ws://localhost:${port}`);
 
 socket.once("open", async () => {
   // initialize DB

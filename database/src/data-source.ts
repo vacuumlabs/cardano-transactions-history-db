@@ -4,11 +4,11 @@ import { Transaction, TransactionOutput } from "./entity/Transaction";
 
 export const DBDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "development",
-  password: "oguuD3*W3S72",
-  database: "transactions",
+  host: process.env.DB_HOST || "localhost",
+  port: Number(process.env.DB_PORT) || 5432,
+  username: process.env.DB_USERNAME || "development",
+  password: process.env.DB_PASSWORD || "oguuD3*W3S72",
+  database: process.env.DB_DATABASE || "transactions",
   synchronize: true,
   logging: false,
   entities: [Transaction, TransactionOutput],

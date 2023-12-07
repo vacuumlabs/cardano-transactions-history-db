@@ -3,7 +3,7 @@ import { onTransaction } from "./on-transaction";
 
 import { initializeTransactionDB } from "../../../database/dist";
 
-const port = 3001;
+const port = Number(process.env.PORT) || 3001;
 
 const initializeApp = async () => {
   const app = express();

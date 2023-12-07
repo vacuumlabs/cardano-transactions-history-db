@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: oguuD3*W3S72
       POSTGRES_DB: transactions
     ports:
-      - ${POSTGRES_PORT:-5432}:5432
+      - ${DB_PORT:-5432}:5432
 
   adminer:
     image: adminer
