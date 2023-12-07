@@ -7,7 +7,7 @@ export const writeTransactionDataToFile = (
   data: any
 ) => {
   // open file (if exists)
-  const filePath = `../_measurements/${hash}.json`;
+  const filePath = `../../_transactions/${hash}.json`;
   let existingFileContent: {
     timestamps: Record<string, number>;
     data: Record<string, any>;
